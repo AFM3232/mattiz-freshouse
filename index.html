@@ -722,15 +722,16 @@ body.mode-slides .slide-nav.nav-visible{opacity:1;pointer-events:auto;transform:
   body:not(.mode-slides){overflow:visible!important;background:#FFFFFF!important}
   body:not(.mode-slides) .blob{display:none!important}
   body:not(.mode-slides) .report{max-width:100%!important;width:100%!important;margin:0!important}
+  body:not(.mode-slides) *{box-shadow:none!important;text-shadow:none!important}
   body:not(.mode-slides) .photo-more{max-height:none!important;display:block!important}
-  body:not(.mode-slides) .cover-page{page-break-after:always;min-height:230mm!important;height:auto!important;padding:.3rem .2rem 0!important;display:flex!important;overflow:visible!important;justify-content:space-between!important}
+  body:not(.mode-slides) .cover-page{page-break-after:always;min-height:auto!important;height:auto!important;padding:.5rem .2rem 1.5rem!important;display:flex!important;overflow:visible!important;justify-content:flex-start!important}
   body:not(.mode-slides) .cover-body{grid-template-columns:1fr!important;gap:1.25rem!important;padding:1.25rem 0!important;align-items:start!important}
   body:not(.mode-slides) .cover-body>*{min-width:0!important}
-  body:not(.mode-slides) .cover-photo img{aspect-ratio:auto!important;width:100%!important;height:82mm!important;object-fit:cover!important}
+  body:not(.mode-slides) .cover-photo img{aspect-ratio:16/9!important;width:100%!important;height:auto!important}
   body:not(.mode-slides) .section{padding:1.5rem 0 0!important;border-top:none!important;page-break-before:always!important}
   body:not(.mode-slides) #quienes-somos{page-break-before:avoid!important}
   body:not(.mode-slides) .photo-cat-label{break-after:avoid!important;page-break-after:avoid!important}
-  body:not(.mode-slides) .photo-category{break-before:auto;page-break-inside:avoid;break-inside:avoid}
+  body:not(.mode-slides) .photo-category{break-before:auto}
   body:not(.mode-slides) .conclusion-section{page-break-before:always!important}
   /* Portada y secciones de cierre: fondo blanco limpio (evita recuadro de degradado con los márgenes de impresión) */
   body:not(.mode-slides) .cover-page{background:#FFFFFF!important}

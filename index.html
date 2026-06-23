@@ -725,7 +725,11 @@ body.mode-slides .slide-nav.nav-visible{opacity:1;pointer-events:auto;transform:
   body:not(.mode-slides) .cover-body{grid-template-columns:1fr!important;gap:1.25rem!important;padding:1.25rem 0!important;align-items:start!important}
   body:not(.mode-slides) .cover-body>*{min-width:0!important}
   body:not(.mode-slides) .cover-photo img{aspect-ratio:16/9!important;width:100%!important;height:auto!important}
-  body:not(.mode-slides) .section{padding:1.5rem 0!important;border-top:none!important}
+  body:not(.mode-slides) .section{padding:1.5rem 0 0!important;border-top:none!important;page-break-before:always!important}
+  body:not(.mode-slides) #quienes-somos{page-break-before:avoid!important}
+  body:not(.mode-slides) .photo-cat-label{break-after:avoid!important;page-break-after:avoid!important}
+  body:not(.mode-slides) .photo-category{break-before:auto}
+  body:not(.mode-slides) .conclusion-section{page-break-before:always!important}
   body:not(.mode-slides) .chapter-banner{page-break-before:always;min-height:0!important;padding:1.6rem 0!important;border:none!important}
   body:not(.mode-slides) h2,body:not(.mode-slides) h3,body:not(.mode-slides) h4,
   body:not(.mode-slides) .section-title,body:not(.mode-slides) .gallery-label,body:not(.mode-slides) .photo-section-label{break-after:avoid!important;page-break-after:avoid!important}
@@ -1124,7 +1128,7 @@ body.mode-slides #presupuesto td{padding:.28rem .65rem!important}
       </div>
     </div>
     <div class="cover-photo">
-      <img src="media/fotos-mattiz/portada.jpg" alt="Mattiz Condominio — Armenia">
+      <img src="media/registro/portada-mattiz.jpg" alt="Mattiz Condominio — Armenia">
       <div class="cover-photo-tag">Mattiz Condominio · Armenia, Quindío</div>
     </div>
   </div>
@@ -1285,39 +1289,103 @@ body.mode-slides #presupuesto td{padding:.28rem .65rem!important}
   <div class="content-resumen">Inspección visual en sitio con registro fotográfico y toma de <strong>dron</strong>, acompañada por el ing. Renso Montoya y la asesora técnica Arq. Isabella Ramos (Pintuco). Las imágenes evidencian las principales patologías del sistema de recubrimiento, el sustrato y la carpintería metálica. <em>Las fotografías son ilustrativas: las patologías pueden encontrarse en más de un punto del proyecto.</em></div>
 
   <div class="photo-category reveal" style="margin-top:1.5rem">
-    <div class="photo-cat-label"><span>Vista general — toma de dron</span></div>
-    <div class="photo-grid">
-      <div class="photo-item"><img data-src="media/fotos-mattiz/dron-general.jpg" alt="Vista general Mattiz" decoding="async" class="lazy-img"><div class="photo-label">Vista general — Mattiz Condominio</div></div>
-      <div class="photo-item"><img data-src="media/fotos-mattiz/dron-cubierta.jpg" alt="Vista aérea de cubiertas" decoding="async" class="lazy-img"><div class="photo-label">Vista aérea de cubiertas</div></div>
-      <div class="photo-item"><img data-src="media/fotos-mattiz/dron-fachada-1.jpg" alt="Fachada contraste de tonos" decoding="async" class="lazy-img"><div class="photo-label">Fachada — contraste de tonos</div></div>
-      <div class="photo-item"><img data-src="media/fotos-mattiz/dron-fachada-2.jpg" alt="Eje de balcones fachada oscura" decoding="async" class="lazy-img"><div class="photo-label">Eje de balcones — fachada oscura</div></div>
-      <div class="photo-item"><img data-src="media/fotos-mattiz/dron-esquina.jpg" alt="Esquina de fachada y balcones" decoding="async" class="lazy-img"><div class="photo-label">Esquina de fachada y balcones</div></div>
+    <div class="photo-cat-label"><span>Distribución de patologías — registro fotográfico</span></div>
+    <div style="display:flex;flex-direction:column;gap:.65rem;margin-top:1rem">
+      <div style="display:flex;align-items:center;gap:.9rem"><div style="flex:0 0 40%;font-family:'Inter',sans-serif;font-size:.8rem;color:var(--text-primary);font-weight:500;text-align:right;line-height:1.25">Material vencido y desprendimientos</div><div style="flex:1;background:var(--bg-surface);border:1px solid var(--border-subtle);border-radius:6px;height:20px;overflow:hidden"><div style="width:31%;height:100%;background:linear-gradient(90deg,#F97316,#EA580C);border-radius:6px 0 0 6px"></div></div><div style="flex:0 0 40px;font-family:'JetBrains Mono',monospace;font-weight:700;color:#EA580C;font-size:.92rem">31%</div></div>
+      <div style="display:flex;align-items:center;gap:.9rem"><div style="flex:0 0 40%;font-family:'Inter',sans-serif;font-size:.8rem;color:var(--text-primary);font-weight:500;text-align:right;line-height:1.25">Alfajías, anclajes y carpintería metálica</div><div style="flex:1;background:var(--bg-surface);border:1px solid var(--border-subtle);border-radius:6px;height:20px;overflow:hidden"><div style="width:23%;height:100%;background:linear-gradient(90deg,#F97316,#EA580C);border-radius:6px 0 0 6px"></div></div><div style="flex:0 0 40px;font-family:'JetBrains Mono',monospace;font-weight:700;color:#EA580C;font-size:.92rem">23%</div></div>
+      <div style="display:flex;align-items:center;gap:.9rem"><div style="flex:0 0 40%;font-family:'Inter',sans-serif;font-size:.8rem;color:var(--text-primary);font-weight:500;text-align:right;line-height:1.25">Ingreso y retención de agua</div><div style="flex:1;background:var(--bg-surface);border:1px solid var(--border-subtle);border-radius:6px;height:20px;overflow:hidden"><div style="width:16%;height:100%;background:linear-gradient(90deg,#F97316,#EA580C);border-radius:6px 0 0 6px"></div></div><div style="flex:0 0 40px;font-family:'JetBrains Mono',monospace;font-weight:700;color:#EA580C;font-size:.92rem">16%</div></div>
+      <div style="display:flex;align-items:center;gap:.9rem"><div style="flex:0 0 40%;font-family:'Inter',sans-serif;font-size:.8rem;color:var(--text-primary);font-weight:500;text-align:right;line-height:1.25">Trabajos mal ejecutados</div><div style="flex:1;background:var(--bg-surface);border:1px solid var(--border-subtle);border-radius:6px;height:20px;overflow:hidden"><div style="width:12%;height:100%;background:linear-gradient(90deg,#F97316,#EA580C);border-radius:6px 0 0 6px"></div></div><div style="flex:0 0 40px;font-family:'JetBrains Mono',monospace;font-weight:700;color:#EA580C;font-size:.92rem">12%</div></div>
+      <div style="display:flex;align-items:center;gap:.9rem"><div style="flex:0 0 40%;font-family:'Inter',sans-serif;font-size:.8rem;color:var(--text-primary);font-weight:500;text-align:right;line-height:1.25">Hongos y colonización biológica</div><div style="flex:1;background:var(--bg-surface);border:1px solid var(--border-subtle);border-radius:6px;height:20px;overflow:hidden"><div style="width:9%;height:100%;background:linear-gradient(90deg,#F97316,#EA580C);border-radius:6px 0 0 6px"></div></div><div style="flex:0 0 40px;font-family:'JetBrains Mono',monospace;font-weight:700;color:#EA580C;font-size:.92rem">9%</div></div>
+      <div style="display:flex;align-items:center;gap:.9rem"><div style="flex:0 0 40%;font-family:'Inter',sans-serif;font-size:.8rem;color:var(--text-primary);font-weight:500;text-align:right;line-height:1.25">Fisuras</div><div style="flex:1;background:var(--bg-surface);border:1px solid var(--border-subtle);border-radius:6px;height:20px;overflow:hidden"><div style="width:9%;height:100%;background:linear-gradient(90deg,#F97316,#EA580C);border-radius:6px 0 0 6px"></div></div><div style="flex:0 0 40px;font-family:'JetBrains Mono',monospace;font-weight:700;color:#EA580C;font-size:.92rem">9%</div></div>
     </div>
+    <div style="font-size:.7rem;color:var(--text-muted);margin-top:.7rem;font-style:italic">Porcentaje sobre el total de patologías documentadas en el registro fotográfico de la inspección (una misma toma puede evidenciar varias patologías).</div>
   </div>
 
   <div class="photo-category reveal" style="margin-top:1.25rem">
-    <div class="photo-cat-label"><span>Registro de patologías — detalle</span></div>
+    <div class="photo-cat-label"><span>Vista general — tomas de control (10)</span></div>
     <div class="photo-grid">
-      <div class="photo-item"><img data-src="media/fotos-mattiz/01-suciedad-fisura.jpg" alt="Suciedad y fisura en textura" decoding="async" class="lazy-img"><div class="photo-label">Suciedad y fisura en textura</div></div>
-      <div class="photo-item"><img data-src="media/fotos-mattiz/11-hongos-antepecho.jpg" alt="Hongos y escurrimiento en antepecho" decoding="async" class="lazy-img"><div class="photo-label">Hongos y escurrimiento en antepecho</div></div>
-      <div class="photo-item"><img data-src="media/fotos-mattiz/07-hongo-ventana.jpg" alt="Colonización biológica bajo ventana" decoding="async" class="lazy-img"><div class="photo-label">Colonización biológica bajo ventana</div></div>
-      <div class="photo-item"><img data-src="media/fotos-mattiz/02-desprendimiento.jpg" alt="Desprendimiento de recubrimiento" decoding="async" class="lazy-img"><div class="photo-label">Desprendimiento de recubrimiento</div></div>
-      <div class="photo-item"><img data-src="media/fotos-mattiz/05-oxidacion-marco.jpg" alt="Oxidación en carpintería metálica" decoding="async" class="lazy-img"><div class="photo-label">Oxidación en carpintería metálica</div></div>
-      <div class="photo-item"><img data-src="media/fotos-mattiz/12-fisura-dilatacion.jpg" alt="Fisura en junta de dilatación" decoding="async" class="lazy-img"><div class="photo-label">Fisura en junta de dilatación</div></div>
+      <div class="photo-item"><img data-src="media/registro/g0-vista-general-01.jpg" alt="Vista general del edificio — toma 1" decoding="async" class="lazy-img"><div class="photo-label">Vista general del edificio — toma 1</div></div>
+      <div class="photo-item"><img data-src="media/registro/g0-vista-general-02.jpg" alt="Vista general del edificio — toma 2" decoding="async" class="lazy-img"><div class="photo-label">Vista general del edificio — toma 2</div></div>
+      <div class="photo-item"><img data-src="media/registro/g0-vista-general-03.jpg" alt="Vista general del edificio — toma 3" decoding="async" class="lazy-img"><div class="photo-label">Vista general del edificio — toma 3</div></div>
+      <div class="photo-item"><img data-src="media/registro/g0-vista-general-04.jpg" alt="Vista general del edificio — toma 4" decoding="async" class="lazy-img"><div class="photo-label">Vista general del edificio — toma 4</div></div>
+      <div class="photo-item"><img data-src="media/registro/g0-vista-general-05.jpg" alt="Vista general del edificio — toma 5" decoding="async" class="lazy-img"><div class="photo-label">Vista general del edificio — toma 5</div></div>
+      <div class="photo-item"><img data-src="media/registro/g0-vista-general-06.jpg" alt="Vista general del edificio — toma 6" decoding="async" class="lazy-img"><div class="photo-label">Vista general del edificio — toma 6</div></div>
+      <div class="photo-item"><img data-src="media/registro/g0-vista-general-07.jpg" alt="Vista general del edificio — toma 7" decoding="async" class="lazy-img"><div class="photo-label">Vista general del edificio — toma 7</div></div>
+      <div class="photo-item"><img data-src="media/registro/g0-vista-general-08.jpg" alt="Vista general del edificio — toma 8" decoding="async" class="lazy-img"><div class="photo-label">Vista general del edificio — toma 8</div></div>
+      <div class="photo-item"><img data-src="media/registro/g0-vista-general-09.jpg" alt="Vista general del edificio — toma 9" decoding="async" class="lazy-img"><div class="photo-label">Vista general del edificio — toma 9</div></div>
+      <div class="photo-item"><img data-src="media/registro/g0-vista-general-10.jpg" alt="Vista general del edificio — toma 10" decoding="async" class="lazy-img"><div class="photo-label">Vista general del edificio — toma 10</div></div>
     </div>
-    <div class="photo-more open">
-      <div class="photo-grid" style="margin-top:.75rem">
-        <div class="photo-item"><img data-src="media/fotos-mattiz/08-oxidacion-jamba.jpg" alt="Óxido en jamba metálica" decoding="async" class="lazy-img"><div class="photo-label">Óxido en jamba metálica</div></div>
-        <div class="photo-item"><img data-src="media/fotos-mattiz/09-hongos-balcon.jpg" alt="Hongos y escurrimiento en balcón" decoding="async" class="lazy-img"><div class="photo-label">Hongos y escurrimiento en balcón</div></div>
-        <div class="photo-item"><img data-src="media/fotos-mattiz/10-entizamiento.jpg" alt="Entizamiento y variación de textura" decoding="async" class="lazy-img"><div class="photo-label">Entizamiento y variación de textura</div></div>
-        <div class="photo-item"><img data-src="media/fotos-mattiz/03-antepecho-suciedad.jpg" alt="Suciedad generalizada en antepecho" decoding="async" class="lazy-img"><div class="photo-label">Suciedad generalizada en antepecho</div></div>
-        <div class="photo-item"><img data-src="media/fotos-mattiz/06-fachada-oscura.jpg" alt="Escurrimientos en fachada oscura" decoding="async" class="lazy-img"><div class="photo-label">Escurrimientos en fachada oscura</div></div>
-        <div class="photo-item"><img data-src="media/fotos-mattiz/04-vista-patio.jpg" alt="Escurrimientos en fachada interior" decoding="async" class="lazy-img"><div class="photo-label">Escurrimientos en fachada interior</div></div>
-      </div>
+  </div>
+  <div class="photo-category reveal" style="margin-top:1.25rem">
+    <div class="photo-cat-label"><span>Material vencido y desprendimientos (14)</span></div>
+    <div class="photo-grid">
+      <div class="photo-item"><img data-src="media/registro/g1-material-desprendimiento-01.jpg" alt="Desprendimiento de material" decoding="async" class="lazy-img"><div class="photo-label">Desprendimiento de material</div></div>
+      <div class="photo-item"><img data-src="media/registro/g1-material-desprendimiento-02.jpg" alt="Entizamientos, material que perdió vida útil e ingreso de agua" decoding="async" class="lazy-img"><div class="photo-label">Entizamientos, material que perdió vida útil e ingreso de agua</div></div>
+      <div class="photo-item"><img data-src="media/registro/g1-material-desprendimiento-03.jpg" alt="Material que ha perdido su vida útil y trabajos mal ejecutados" decoding="async" class="lazy-img"><div class="photo-label">Material que ha perdido su vida útil y trabajos mal ejecutados</div></div>
+      <div class="photo-item"><img data-src="media/registro/g1-material-desprendimiento-04.jpg" alt="Material que ha perdido su vida útil" decoding="async" class="lazy-img"><div class="photo-label">Material que ha perdido su vida útil</div></div>
+      <div class="photo-item"><img data-src="media/registro/g1-material-desprendimiento-05.jpg" alt="Material que perdió su vida útil e ingresos de agua" decoding="async" class="lazy-img"><div class="photo-label">Material que perdió su vida útil e ingresos de agua</div></div>
+      <div class="photo-item"><img data-src="media/registro/g1-material-desprendimiento-06.jpg" alt="Material que perdió su vida útil" decoding="async" class="lazy-img"><div class="photo-label">Material que perdió su vida útil</div></div>
+      <div class="photo-item"><img data-src="media/registro/g1-material-desprendimiento-07.jpg" alt="Material que perdió vida útil" decoding="async" class="lazy-img"><div class="photo-label">Material que perdió vida útil</div></div>
+      <div class="photo-item"><img data-src="media/registro/g1-material-desprendimiento-08.jpg" alt="Toma principal (material que perdió su vida útil, trabajos mal…" decoding="async" class="lazy-img"><div class="photo-label">Toma principal (material que perdió su vida útil, trabajos mal…</div></div>
+      <div class="photo-item"><img data-src="media/registro/g1-material-desprendimiento-09.jpg" alt="Toma principal, material en mal estado con gran posibilidad de…" decoding="async" class="lazy-img"><div class="photo-label">Toma principal, material en mal estado con gran posibilidad de…</div></div>
+      <div class="photo-item"><img data-src="media/registro/g1-material-desprendimiento-10.jpg" alt="Toma principal, material en mal estado con gran posibilidad de…" decoding="async" class="lazy-img"><div class="photo-label">Toma principal, material en mal estado con gran posibilidad de…</div></div>
+      <div class="photo-item"><img data-src="media/registro/g1-material-desprendimiento-11.jpg" alt="Toma principal, material en mal estado con gran posibilidad de…" decoding="async" class="lazy-img"><div class="photo-label">Toma principal, material en mal estado con gran posibilidad de…</div></div>
+      <div class="photo-item"><img data-src="media/registro/g1-material-desprendimiento-12.jpg" alt="Toma principal, material en mal estado con gran posibilidad de…" decoding="async" class="lazy-img"><div class="photo-label">Toma principal, material en mal estado con gran posibilidad de…</div></div>
+      <div class="photo-item"><img data-src="media/registro/g1-material-desprendimiento-13.jpg" alt="Toma principal, material en mal estado con gran posibilidad de…" decoding="async" class="lazy-img"><div class="photo-label">Toma principal, material en mal estado con gran posibilidad de…</div></div>
+      <div class="photo-item"><img data-src="media/registro/g1-material-desprendimiento-14.jpg" alt="Entizamiento, ingreso de agua, fisuras" decoding="async" class="lazy-img"><div class="photo-label">Entizamiento, ingreso de agua, fisuras</div></div>
+    </div>
+  </div>
+  <div class="photo-category reveal" style="margin-top:1.25rem">
+    <div class="photo-cat-label"><span>Alfajías, anclajes y carpintería metálica (4)</span></div>
+    <div class="photo-grid">
+      <div class="photo-item"><img data-src="media/registro/g2-alfajias-anclajes-01.jpg" alt="Alfajias en mal estado, material que perdió su vida útil, trab…" decoding="async" class="lazy-img"><div class="photo-label">Alfajias en mal estado, material que perdió su vida útil, trab…</div></div>
+      <div class="photo-item"><img data-src="media/registro/g2-alfajias-anclajes-02.jpg" alt="Alfajias en mal estado, material que perdió su vida útil" decoding="async" class="lazy-img"><div class="photo-label">Alfajias en mal estado, material que perdió su vida útil</div></div>
+      <div class="photo-item"><img data-src="media/registro/g2-alfajias-anclajes-03.jpg" alt="Alfajias y anclajes en mal estado" decoding="async" class="lazy-img"><div class="photo-label">Alfajias y anclajes en mal estado</div></div>
+      <div class="photo-item"><img data-src="media/registro/g2-alfajias-anclajes-04.jpg" alt="Alfajias y anclajes en mal estado" decoding="async" class="lazy-img"><div class="photo-label">Alfajias y anclajes en mal estado</div></div>
+    </div>
+  </div>
+  <div class="photo-category reveal" style="margin-top:1.25rem">
+    <div class="photo-cat-label"><span>Ingreso y retención de agua (8)</span></div>
+    <div class="photo-grid">
+      <div class="photo-item"><img data-src="media/registro/g3-agua-01.jpg" alt="Acumulación de agua y corrosion" decoding="async" class="lazy-img"><div class="photo-label">Acumulación de agua y corrosion</div></div>
+      <div class="photo-item"><img data-src="media/registro/g3-agua-02.jpg" alt="Acumulación de agua y corrosión" decoding="async" class="lazy-img"><div class="photo-label">Acumulación de agua y corrosión</div></div>
+      <div class="photo-item"><img data-src="media/registro/g3-agua-03.jpg" alt="Acumulación de agua y proliferación de hongos masiva" decoding="async" class="lazy-img"><div class="photo-label">Acumulación de agua y proliferación de hongos masiva</div></div>
+      <div class="photo-item"><img data-src="media/registro/g3-agua-04.jpg" alt="Ingreso de agua masivo, material que perdió su vida útil" decoding="async" class="lazy-img"><div class="photo-label">Ingreso de agua masivo, material que perdió su vida útil</div></div>
+      <div class="photo-item"><img data-src="media/registro/g3-agua-05.jpg" alt="Ingreso de agua masivo, material que perdió su vida útil" decoding="async" class="lazy-img"><div class="photo-label">Ingreso de agua masivo, material que perdió su vida útil</div></div>
+      <div class="photo-item"><img data-src="media/registro/g3-agua-06.jpg" alt="Ingreso de agua, material que perdió su vida útil" decoding="async" class="lazy-img"><div class="photo-label">Ingreso de agua, material que perdió su vida útil</div></div>
+      <div class="photo-item"><img data-src="media/registro/g3-agua-07.jpg" alt="Retención de agua y material que perdió su vida útil" decoding="async" class="lazy-img"><div class="photo-label">Retención de agua y material que perdió su vida útil</div></div>
+      <div class="photo-item"><img data-src="media/registro/g3-agua-08.jpg" alt="Retención de agua y pintura que perdió su vida útil" decoding="async" class="lazy-img"><div class="photo-label">Retención de agua y pintura que perdió su vida útil</div></div>
+    </div>
+  </div>
+  <div class="photo-category reveal" style="margin-top:1.25rem">
+    <div class="photo-cat-label"><span>Trabajos mal ejecutados (pecados constructivos) (2)</span></div>
+    <div class="photo-grid">
+      <div class="photo-item"><img data-src="media/registro/g4-trabajos-mal-01.jpg" alt="Pecados constructivos, anclajes en mal estado" decoding="async" class="lazy-img"><div class="photo-label">Pecados constructivos, anclajes en mal estado</div></div>
+      <div class="photo-item"><img data-src="media/registro/g4-trabajos-mal-02.jpg" alt="Trabajos mal ejecutados" decoding="async" class="lazy-img"><div class="photo-label">Trabajos mal ejecutados</div></div>
+    </div>
+  </div>
+  <div class="photo-category reveal" style="margin-top:1.25rem">
+    <div class="photo-cat-label"><span>Hongos y colonización biológica (3)</span></div>
+    <div class="photo-grid">
+      <div class="photo-item"><img data-src="media/registro/g5-hongos-01.jpg" alt="Crecimiento de vegetación" decoding="async" class="lazy-img"><div class="photo-label">Crecimiento de vegetación</div></div>
+      <div class="photo-item"><img data-src="media/registro/g5-hongos-02.jpg" alt="Presencia masiva de hongos y retención de agua" decoding="async" class="lazy-img"><div class="photo-label">Presencia masiva de hongos y retención de agua</div></div>
+      <div class="photo-item"><img data-src="media/registro/g5-hongos-03.jpg" alt="Presencia masiva de hongos y retención de agua" decoding="async" class="lazy-img"><div class="photo-label">Presencia masiva de hongos y retención de agua</div></div>
+    </div>
+  </div>
+  <div class="photo-category reveal" style="margin-top:1.25rem">
+    <div class="photo-cat-label"><span>Fisuras (7)</span></div>
+    <div class="photo-grid">
+      <div class="photo-item"><img data-src="media/registro/g6-fisuras-01.jpg" alt="Fisura y crecimiento de hongos" decoding="async" class="lazy-img"><div class="photo-label">Fisura y crecimiento de hongos</div></div>
+      <div class="photo-item"><img data-src="media/registro/g6-fisuras-02.jpg" alt="Fisura y crecimiento de hongos" decoding="async" class="lazy-img"><div class="photo-label">Fisura y crecimiento de hongos</div></div>
+      <div class="photo-item"><img data-src="media/registro/g6-fisuras-03.jpg" alt="Fisura y crecimiento de hongos" decoding="async" class="lazy-img"><div class="photo-label">Fisura y crecimiento de hongos</div></div>
+      <div class="photo-item"><img data-src="media/registro/g6-fisuras-04.jpg" alt="Fisura y retención de agua" decoding="async" class="lazy-img"><div class="photo-label">Fisura y retención de agua</div></div>
+      <div class="photo-item"><img data-src="media/registro/g6-fisuras-05.jpg" alt="Fisura y retención de agua" decoding="async" class="lazy-img"><div class="photo-label">Fisura y retención de agua</div></div>
+      <div class="photo-item"><img data-src="media/registro/g6-fisuras-06.jpg" alt="Fisuras y presencia de hongos" decoding="async" class="lazy-img"><div class="photo-label">Fisuras y presencia de hongos</div></div>
+      <div class="photo-item"><img data-src="media/registro/g6-fisuras-07.jpg" alt="Fisuras, placas de superboard rotas y trabajos mal ejecutador" decoding="async" class="lazy-img"><div class="photo-label">Fisuras, placas de superboard rotas y trabajos mal ejecutador</div></div>
     </div>
   </div>
 
-  <div class="section-divider"></div>
+    <div class="section-divider"></div>
   <h3 style="font-family:'Space Grotesk',sans-serif;font-size:1rem;font-weight:600;margin-bottom:1rem;color:var(--text-primary)">Hallazgos del diagnóstico</h3>
   <div class="card-grid">
     <div class="card reveal"><div class="card-icon" style="background:rgba(234,88,12,.1)">🦠</div><h4>Suciedad y hongos</h4><p>Suciedad generalizada, smog y colonización biológica — hongos negros y verdes, además de hongo rojo en la fachada trasera.</p></div>

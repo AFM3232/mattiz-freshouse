@@ -730,6 +730,16 @@ body.mode-slides .slide-nav.nav-visible{opacity:1;pointer-events:auto;transform:
   body:not(.mode-slides) .photo-cat-label{break-after:avoid!important;page-break-after:avoid!important}
   body:not(.mode-slides) .photo-category{break-before:auto}
   body:not(.mode-slides) .conclusion-section{page-break-before:always!important}
+  /* Portada y secciones de cierre: fondo blanco limpio (evita recuadro de degradado con los márgenes de impresión) */
+  body:not(.mode-slides) .cover-page{background:#FFFFFF!important}
+  body:not(.mode-slides) .cover-grid,body:not(.mode-slides) .cover-accent-bar{display:none!important}
+  body:not(.mode-slides) .conclusion-section{background:#FFFFFF!important;border-top:none!important}
+  /* Contexto: centrar verticalmente el contenido para aprovechar el espacio sin pasar de una página */
+  body:not(.mode-slides) #contexto{display:flex!important;flex-direction:column!important;min-height:88vh!important}
+  body:not(.mode-slides) #contexto .exec-grid{margin-top:auto!important;margin-bottom:auto!important;gap:3rem!important;align-items:center!important}
+  body:not(.mode-slides) #contexto .exec-lead{font-size:1rem!important;line-height:1.95!important}
+  body:not(.mode-slides) #contexto .kpi-grid{gap:1.1rem!important}
+  body:not(.mode-slides) #contexto .kpi-card{padding:1.7rem 1.4rem!important}
   body:not(.mode-slides) .chapter-banner{page-break-before:always;min-height:0!important;padding:1.6rem 0!important;border:none!important}
   body:not(.mode-slides) h2,body:not(.mode-slides) h3,body:not(.mode-slides) h4,
   body:not(.mode-slides) .section-title,body:not(.mode-slides) .gallery-label,body:not(.mode-slides) .photo-section-label{break-after:avoid!important;page-break-after:avoid!important}
